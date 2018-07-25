@@ -65,9 +65,9 @@ int main ( int argc,  char * argv[] )
 
 	param_el param[] = {
 		{ "--help", "-h", 0x01, cT ( bool ), &flag, "this window" },
-		{ "--dir", "-d", 1, cT ( str ), paramDir, "joystick direction position on keypad ( left/right )" },
-		{ "--speed", "-s", 1, cT ( str ), paramSpeed, "joystick speed position on keypad ( left/right )" },
-		{ "--cam", "-c", 1, cT ( str ), paramCam, "joystick camera position on keypad ( right/left )" },
+		{ "--dir", "-d", 1, cT ( str ), paramDir, "direction joystick position on keypad ( left/right )" },
+		{ "--speed", "-s", 1, cT ( str ), paramSpeed, "speed joystick position on keypad ( left/right )" },
+		{ "--cam", "-c", 1, cT ( str ), paramCam, "camera joystick position on keypad ( right/left )" },
 		{ NULL, NULL, 0, 0, NULL, NULL }
 	};
 

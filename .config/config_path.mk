@@ -1,4 +1,4 @@
-EXEC=exec
+EXEC=d621
 OUTFOLDER=out
 ROOT_DIR=bin
 DOC_DIR=doc
