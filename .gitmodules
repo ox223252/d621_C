@@ -1,6 +1,6 @@
 [submodule "Configure"]
 	path = Configure
-	url = git@github.com:ox223252/Configure.git
+	url = https://github.com/ox223252/Configure.git
 [submodule "src/lib/config"]
 	path = src/lib/config
 	url = https://github.com/ox223252/config.git
