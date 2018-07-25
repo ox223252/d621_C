@@ -1,0 +1,18 @@
+[submodule "Configure"]
+	path = Configure
+	url = git@github.com:ox223252/Configure.git
+[submodule "src/lib/config"]
+	path = src/lib/config
+	url = https://github.com/ox223252/config.git
+[submodule "src/lib/freeOnExit"]
+	path = src/lib/freeOnExit
+	url = https://github.com/ox223252/freeOnExit.git
+[submodule "src/lib/pca9685"]
+	path = src/lib/pca9685
+	url = https://github.com/ox223252/pca9685.git
+[submodule "src/lib/signalHandler"]
+	path = src/lib/signalHandler
+	url = https://github.com/ox223252/signalHandler.git
+[submodule "src/lib/Xbox360-wireless"]
+	path = src/lib/Xbox360-wireless
+	url = https://github.com/ox223252/Xbox360-wireless.git
