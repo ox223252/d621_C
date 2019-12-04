@@ -44,9 +44,9 @@ int main ( int argc,  char * argv[] )
 	char *paramDir = NULL;
 	char *paramSpeed = NULL;
 
-	uint16_t * pCam;
-	uint16_t * pDir;
-	uint16_t * pSpeed;
+	int16_t * pCam;
+	int16_t * pDir;
+	int16_t * pSpeed;
 
 	signalHandling sig = {
 		.flag = { 
@@ -61,10 +61,10 @@ int main ( int argc,  char * argv[] )
 	struct
 	{
 		uint8_t help:1;
-	}flag;
+	}flags = { 0 };
 
 	param_el param[] = {
-		{ "--help", "-h", 0x01, cT ( bool ), &flag, "this window" },
+		{ "--help", "-h", 0x01, cT ( bool ), &flags, "this window" },
 		{ "--dir", "-d", 1, cT ( str ), paramDir, "direction joystick position on keypad ( left/right )" },
 		{ "--speed", "-s", 1, cT ( str ), paramSpeed, "speed joystick position on keypad ( left/right )" },
 		{ "--cam", "-c", 1, cT ( str ), paramCam, "camera joystick position on keypad ( right/left )" },
@@ -82,6 +82,16 @@ int main ( int argc,  char * argv[] )
 	pDir = &pad.X1;
 	pSpeed = &pad.Y1;
 	pCam = &pad.X2;
+
+	if ( readParamArgs ( argc, argv, param ) )
+	{ // failure case
+	}
+	
+	if ( flags.help )
+	{// configFile read successfully
+		helpParamArgs ( param );
+		return ( 0 );
+	}
 
 	if ( !strcmp ( paramDir, "right" ) )
 	{
@@ -167,7 +177,7 @@ int main ( int argc,  char * argv[] )
 		}
 		else if ( (*pDir) < -4000 )
 		{
-			dirT = 300 + ( (*pDir) + 4000 ) / 280, pca9685;
+			dirT = 300 + ( (*pDir) + 4000 ) / 280;
 		}
 		else
 		{
