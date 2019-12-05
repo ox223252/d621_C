@@ -1,0 +1,1 @@
+OUT_DLL=static

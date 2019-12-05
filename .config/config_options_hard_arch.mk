@@ -1,1 +1,1 @@
-HARD_ARCH=natif
+HARD_ARCH=arm-Linux
