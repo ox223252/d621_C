@@ -16,3 +16,9 @@
 [submodule "src/lib/Xbox360-wireless"]
 	path = src/lib/Xbox360-wireless
 	url = https://github.com/ox223252/Xbox360-wireless.git
+[submodule "src/lib/log"]
+	path = src/lib/log
+	url = https://github.com/ox223252/log.git
+[submodule "src/lib/morse"]
+	path = src/lib/morse
+	url = https://github.com/ox223252/morse.git
